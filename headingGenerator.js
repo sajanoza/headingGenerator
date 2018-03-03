@@ -44,7 +44,7 @@ na podstawie obiektu pseudo-tablicy asocjacyjnej ze zbiorem par styl wartość*/
 function generujCSSString(domElementId,styleObject){
 var cssString = "#"+ domElementId+"{\n";
   for(var propertyName in styleObject) {
-    cssString=cssString+propertyName+":"+styleObject[propertyName]+";\n"
+    cssString=cssString+propertyName+":"+styleObject[propertyName]+"!important;\n"
   }
   cssString = cssString+"}"
   return cssString;
