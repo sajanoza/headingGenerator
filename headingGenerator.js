@@ -65,7 +65,9 @@ function changeFont(){
     'Roboto':'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext',
     'Roboto Condensed':'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&amp;subset=latin-ext',
     'Oswald':'https://fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=latin-ext',
-    'Montserrat':'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&amp;subset=latin-ext'
+    'Montserrat':'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&amp;subset=latin-ext',
+    'Open Sans':'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=latin-ext',
+    'Ubuntu':'https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin-ext'
   }
 inportFont.setAttribute('href',gFontsURLsArr[selectFontFamily.value]);
 styleNaglowkaArr['font-family']=selectFontFamily.value+", sans-serif";
