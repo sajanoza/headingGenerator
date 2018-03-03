@@ -56,25 +56,28 @@ window.onload = function(){
   wygenerujFunct();
 }
 
-// aktualizuje tablice ze stylami na podstawie wartości pól input
-function aktualizujStyle(){
+function changeFont(){
   var selectFontFamily = document.getElementById('selectFontFamily');
   var inportFont = document.getElementById('importFont');
-  //font
-  if (selectFontFamily.value=='Lato'){
-    inportFont.setAttribute('href','https://fonts.googleapis.com/css?family=Lato:400,700,700i&amp;subset=latin-ext');
-    styleNaglowkaArr['font-family']="'Lato', sans-serif";
-    stylePrzypisuArr['font-family']="'Lato', sans-serif";
-  }else if (selectFontFamily.value=='Roboto'){
-    inportFont.setAttribute('href','https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext');
-    styleNaglowkaArr['font-family']="'Roboto', sans-serif";
-    stylePrzypisuArr['font-family']="'Roboto', sans-serif";
-  }else if (selectFontFamily.value=='Lobster'){
-    inportFont.setAttribute('href','https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext');
-    styleNaglowkaArr['font-family']="'Lobster', cursive";
-    stylePrzypisuArr['font-family']="'Lobster', cursive";
+  var gFontsURLsArr = {
+    'Lato':'https://fonts.googleapis.com/css?family=Lato:400,700,700i&amp;subset=latin-ext',
+    'Lobster':'https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext',
+    'Roboto':'https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext',
+    'Roboto Condensed':'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&amp;subset=latin-ext',
+    'Oswald':'https://fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=latin-ext',
+    'Montserrat':'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&amp;subset=latin-ext'
   }
+inportFont.setAttribute('href',gFontsURLsArr[selectFontFamily.value]);
+styleNaglowkaArr['font-family']=selectFontFamily.value+", sans-serif";
+stylePrzypisuArr['font-family']=selectFontFamily.value+", sans-serif";
+}
 
+
+
+
+// aktualizuje tablice ze stylami na podstawie wartości pól input
+function aktualizujStyle(){
+  changeFont();
   //style nagłówka
   //styleNaglowkaArr['font-family']=document.getElementById("inputFontFamily").value;
   styleNaglowkaArr['font-weight']='400';
