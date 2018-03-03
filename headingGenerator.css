@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6{
 #settingsPanel{
   max-width:500px;
 }
-input{
+input, select, select option{
   margin-left:5px;
   margin-right:5px;
   border-radius: 8px;

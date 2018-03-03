@@ -23,6 +23,14 @@
     <td>        1em =          </td><td>       <input type="number" id="inputGlobalFontSize" value="50"></input>px          </td>
   </tr>
   <tr>
+    <td>Font:</td>
+    <td><select id='selectFontFamily'>
+      <option value="Roboto">Roboto</option>
+      <option value="Lato">Lato</option>
+      <option value="Lobster">Lobster</option>
+    </select></td>
+  </tr>
+  <tr>
     <td>Margines:</td>
     <td><input type="text" id="inputBorderPadding" value="0.5"></input>em</td>
   </tr>
@@ -92,12 +100,8 @@
   <h2>Podgląd </h2>
   <div id="previewBox" align="center">
     <!--  DOMYŚLNE STYLE DLA WIDGETU -->
+    <link id="importFont" href="https://fonts.googleapis.com/css?family=Lato:400,700,700i&amp;subset=latin-ext" rel="stylesheet">
     <style>
-    #sajanParallaxHeadingContainer p{
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight:400!important;
-      text-shadow:-1px 1px 16px #000000!important;
-    }
     /* ######### mobile #################*/
     @media (max-width: 500px){
       #sajanParallaxHeadingH1{

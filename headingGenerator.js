@@ -12,6 +12,7 @@ var inputy = document.getElementsByTagName('input');
 for (var i=0; i<inputy.length;i++){
   inputy[i].addEventListener("change", wygenerujFunct);
 }
+document.getElementById('selectFontFamily').addEventListener("change", wygenerujFunct);
 
 
 
@@ -57,7 +58,25 @@ window.onload = function(){
 
 // aktualizuje tablice ze stylami na podstawie wartości pól input
 function aktualizujStyle(){
-  styleNaglowkaArr['font-family']=document.getElementById("inputFontFamily").value;
+  var selectFontFamily = document.getElementById('selectFontFamily');
+  var inportFont = document.getElementById('importFont');
+  //font
+  if (selectFontFamily.value=='Lato'){
+    inportFont.setAttribute('href','https://fonts.googleapis.com/css?family=Lato:400,700,700i&amp;subset=latin-ext');
+    styleNaglowkaArr['font-family']="'Lato', sans-serif";
+    stylePrzypisuArr['font-family']="'Lato', sans-serif";
+  }else if (selectFontFamily.value=='Roboto'){
+    inportFont.setAttribute('href','https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext');
+    styleNaglowkaArr['font-family']="'Roboto', sans-serif";
+    stylePrzypisuArr['font-family']="'Roboto', sans-serif";
+  }else if (selectFontFamily.value=='Lobster'){
+    inportFont.setAttribute('href','https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext');
+    styleNaglowkaArr['font-family']="'Lobster', cursive";
+    stylePrzypisuArr['font-family']="'Lobster', cursive";
+  }
+
+  //style nagłówka
+  //styleNaglowkaArr['font-family']=document.getElementById("inputFontFamily").value;
   styleNaglowkaArr['font-weight']='400';
   styleNaglowkaArr['font-size']=document.getElementById("inputFontSize").value+'em';
   styleNaglowkaArr['color']=document.getElementById("inputFontColor").value;
