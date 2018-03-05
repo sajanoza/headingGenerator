@@ -123,12 +123,7 @@ function aktualizujStyle(){
     styleRamkiArr['background']=document.getElementById("inputBorderBackground").value;
   }
 }
-function htmlEscape(s) {
-  return s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
-}
+
 
 
 /* głowna operacja
@@ -142,15 +137,13 @@ function wygenerujFunct(){
   var cssStringPrzypis = generujCSSString('sajanParallaxHeadingP',stylePrzypisuArr);
   var cssStringRamka = generujCSSString('sajanParallaxHeadingContainer',styleRamkiArr);
   sajanParallaxHeadingDynamicStyle.innerHTML='\n'+cssStringH1+'\n'+cssStringPrzypis+'\n'+cssStringRamka+'\n';
-  document.getElementById('codeArea').innerHTML = document.getElementById('previewBox').innerHTML;
+  var codeArea =   document.getElementById('codeArea');
+  codeArea.innerHTML = document.getElementById('previewBox').innerHTML;
 
-  var escapedHtmlString = htmlEscape(document.getElementById('previewBox').innerHTML);
-  /*escapedHtmlString = escapedHtmlString.replace(
-    /&lt;script src[\s\S]*?&gt;&lt;\/script&gt;|&lt;!--\?[\s\S]*?--&gt;|&lt;pre\b[\s\S]*?&lt;\/pre&gt;/g,
-    '<span class="operative">$&<\/span>');*/
-  document.getElementById('codeArea2').innerHTML = escapedHtmlString;
-
-
+  //CodeMirror podmienia mi textarea na edytor z koloryzacją kodu
+  var myCodeMirror = CodeMirror(function(elt) {
+    codeArea.parentNode.replaceChild(elt, codeArea);
+  }, {value: codeArea.value, mode:"htmlmixed", theme:"icecoder"});
   document.getElementById('sajanParallaxHeadingH1').innerHTML=document.getElementById('inputH1Content').value;//wrzucenie testu w nagłówek
   document.getElementById('sajanParallaxHeadingP').innerHTML=document.getElementById('inputPContent').value;
 }
