@@ -42,7 +42,10 @@ input, select, select option{
 textarea{
   color:#000000;
   width: 100%;
-  min-height:400px;
+  min-height:700px;
+}
+.CodeMirror{
+  height:600px!important;
 }
 input[type=color]{
   width:30px;

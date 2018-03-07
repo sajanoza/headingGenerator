@@ -120,21 +120,15 @@
 <div class="uiElement">
   <h2>Podgląd </h2>
   <div id="previewBox" align="center">
-    <!--  DOMYŚLNE STYLE DLA WIDGETU -->
+
     <link id="importFont" href="https://fonts.googleapis.com/css?family=Lato:400,700,700i&amp;subset=latin-ext" rel="stylesheet">
-    <style>
-    /* ######### mobile #################*/
-    @media (max-width: 500px){
-      #sajanParallaxHeadingH1{
-      font-size: 40px!important;
-      }
-      #sajanParallaxHeadingP{
-        font-size: 20px!important;
-      }
-    }
-    </style>
     <!-- DYNAMIZNE STYLE WIDGETU -->
     <style type="text/css" id=sajanParallaxHeadingDynamicStyle></style>
+    <!--  responsywnosc -->
+    <style type="text/css" id="sajanParralaxResponsivStyle">
+    /* ######### mobile #################*/
+
+    </style>
     <!-- widget html -->
     <div align="center" id="sajanParallaxHeadingContainer">
       <div><h1 id="sajanParallaxHeadingH1">Header Line</h1></div>
@@ -145,7 +139,7 @@
 <div class="uiElement">
   <h2>Kod wynikowy | Output code</h2>
   <p>Kod widgetu do skopiowania można edytować go w celu podkręcenia.</p>
-  <textarea id="codeArea"></textarea>
+  <textarea id="codeArea" style="min-height700px"></textarea>
 </div>
 
 

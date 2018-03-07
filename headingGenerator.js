@@ -1,3 +1,5 @@
+
+
 //h1 element
 var sajanParallaxHeadingH1 = document.getElementById('sajanParallaxHeadingH1');
 //style getElementById
@@ -13,6 +15,14 @@ for (var i=0; i<inputy.length;i++){
   inputy[i].addEventListener("change", wygenerujFunct);
 }
 document.getElementById('selectFontFamily').addEventListener("change", wygenerujFunct);
+
+//CodeMirror podmienia mi textarea na edytor z koloryzacją kodu
+
+  var codeArea =   document.getElementById('codeArea');
+  codeArea.innerHTML = document.getElementById('previewBox').innerHTML;
+var myCodeMirror = CodeMirror(function(elt) {
+  codeArea.parentNode.replaceChild(elt, codeArea);
+}, {value: codeArea.value, mode:"htmlmixed", theme:"icecoder"});
 
 
 
@@ -131,19 +141,27 @@ function aktualizujStyle(){
 2. skleja to do kupy i wypełnia element style
 3. uzupełnia content nagłówka i paragrafu.
  */
+
 function wygenerujFunct(){
   aktualizujStyle();
   var cssStringH1 = generujCSSString('sajanParallaxHeadingH1',styleNaglowkaArr);
   var cssStringPrzypis = generujCSSString('sajanParallaxHeadingP',stylePrzypisuArr);
   var cssStringRamka = generujCSSString('sajanParallaxHeadingContainer',styleRamkiArr);
   sajanParallaxHeadingDynamicStyle.innerHTML='\n'+cssStringH1+'\n'+cssStringPrzypis+'\n'+cssStringRamka+'\n';
-  var codeArea =   document.getElementById('codeArea');
-  codeArea.innerHTML = document.getElementById('previewBox').innerHTML;
+  var baseFontSize = styleRamkiArr['font-size'].split('px')[0];
+  var fontSizeStep1 = baseFontSize/100*90;
+  var fontSizeStep2 = baseFontSize/100*70;
+  var fontSizeStep3 = baseFontSize/100*50;
+  var fontSizeStep4 = baseFontSize/100*30;
 
-  //CodeMirror podmienia mi textarea na edytor z koloryzacją kodu
-  var myCodeMirror = CodeMirror(function(elt) {
-    codeArea.parentNode.replaceChild(elt, codeArea);
-  }, {value: codeArea.value, mode:"htmlmixed", theme:"icecoder"});
+
+  sajanParralaxResponsivStyle.innerHTML='\n@media (max-width: 900px){\n#sajanParallaxHeadingContainer{font-size:'+fontSizeStep1+'px!important;}\n}\n@media (max-width: 700px){\n#sajanParallaxHeadingContainer{font-size:'+fontSizeStep2+'px!important;}\n}\n@media (max-width: 500px){\n#sajanParallaxHeadingContainer{font-size:'+fontSizeStep3+'px!important;}\n}\n@media (max-width: 300px){\n#sajanParallaxHeadingContainer{font-size:'+fontSizeStep4+'px!important;}\n}';
+
+
+
+  myCodeMirror.getDoc().setValue(document.getElementById('previewBox').innerHTML);
+
+
   document.getElementById('sajanParallaxHeadingH1').innerHTML=document.getElementById('inputH1Content').value;//wrzucenie testu w nagłówek
   document.getElementById('sajanParallaxHeadingP').innerHTML=document.getElementById('inputPContent').value;
 }
