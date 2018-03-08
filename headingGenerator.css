@@ -13,7 +13,7 @@ body{
 td:first-child{
   text-align: right;
 }
-td[colspan=2]{
+table tbody tr td[colspan=2]{
   text-align: left!important;
 }
 *{
@@ -37,9 +37,12 @@ input, select, select option{
   border: none;
   padding: 3px;
   color: #000;
-  background: #FFF;
+  background: #b9b9b9;
   font-size:12px;
   font-weight:bold;
+}
+input[type=checkbox]{
+  width:15px;
 }
 textarea{
   color:#000000;
@@ -71,3 +74,24 @@ input[type=color]{
 td{
   font-size: 12px;
 }
+select option{
+  font-size: 25px;
+  font-weight: normal;
+}
+.inputSpectrumPicker{
+  width:70px;
+}
+
+.UIIcon{
+  width: 25px;
+  height: 25px;
+}
+
+#Lobster{font-family: 'Lobster', sans-serif;}
+#OpenSans{font-family: 'Open Sans', sans-serif;}
+#Lato{font-family: 'Lato', sans-serif;}
+#Roboto{font-family: 'Roboto', sans-serif;}
+#RobotoCondensed{font-family: 'Roboto Condensed', sans-serif;}
+#Montserrat{font-family: 'Montserrat', sans-serif;}
+#Oswald{font-family: 'Oswald', sans-serif;}
+#Ubuntu{font-family: 'Ubuntu', sans-serif;}

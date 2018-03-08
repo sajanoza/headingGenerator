@@ -6,6 +6,15 @@
   <meta name="description" content="description">
   <meta name="author" content="author">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin-ext" rel="stylesheet">
+
+
   <link href="headingGenerator.css" rel="stylesheet">
 
 
@@ -38,16 +47,16 @@
     <td>        1em =          </td><td>       <input type="number" id="inputGlobalFontSize" value="50"></input>px          </td>
   </tr>
   <tr>
-    <td>Font:</td>
+    <td><!--Font:--><img src="img/icons8-choose-font-50.png" title="Czcionka | Font" class="UIIcon"></td>
     <td><select id='selectFontFamily'>
-      <option value="Open Sans">Open Sans</option>
-      <option value="Lato">Lato</option>
-      <option value="Roboto">Roboto</option>
-      <option value="Roboto Condensed">Roboto Condensed</option>
-      <option value="Montserrat">Montserrat</option>
-      <option value="Oswald">Oswald</option>
-      <option value="Ubuntu">Ubuntu</option>
-      <option value="Lobster">Lobster</option>
+      <option id="OpenSans" value="Open Sans">Open Sans</option>
+      <option id="Lato" value="Lato">Lato</option>
+      <option id="Roboto" value="Roboto">Roboto</option>
+      <option id="RobotoCondensed" value="Roboto Condensed">Roboto Condensed</option>
+      <option id="Montserrat" value="Montserrat">Montserrat</option>
+      <option id="Oswald" value="Oswald">Oswald</option>
+      <option id="Ubuntu" value="Ubuntu">Ubuntu</option>
+      <option id="Lobster" value="Lobster">Lobster</option>
 
     </select></td>
   </tr>
@@ -59,19 +68,19 @@
     <td colspan="2" style="text-align:left;"><input type="checkbox" checked="true" id="naglowekChceckbox"></input><h3>Nagłówek</h3></td>
   </tr>
   <tr>
-    <td><h4>Treść: <img src="img/icons8-align-left-32.png" style="widht:20px; height:20px;"></h4></td><td><input type="text" id="inputH1Content" value="Zażółć gęślą jaźń!"></input></td>
+    <td><h4><!--Treść:--><img src="img/icons8-align-left-32.png" title="Treść | Content" class="UIIcon"></h4></td><td><input type="text" id="inputH1Content" value="Zażółć gęślą jaźń!"></input></td>
   </tr>
   <tr>
-    <td>Wielkość: <img src="img/icons8-font-size-filled-50.png" style="widht:20px; height:20px;"></td><td><input type="number" id="inputFontSize" value="1"></input>em</td>
+    <td><!--Wielkość:--> <img src="img/icons8-font-size-filled-50.png" title="Wielkość czcionki | Font size" class="UIIcon"></td><td><input type="number" id="inputFontSize" value="1"></input>em</td>
   </tr>
   <tr>
-    <td>Interlinia: <img src="img/icons8-height-24.png" style="widht:20px; height:20px;"></td><td><input type="number" id="inputLineHeight" value="1.2"></input>em</td>
+    <td><!--Interlinia: --><img src="img/icons8-height-24.png" title="Interlinia | Line height" class="UIIcon"></td><td><input type="number" id="inputLineHeight" value="1.2"></input>em</td>
   </tr>
   <tr>
-    <td>Bold: <img src="img/icons8-bold-filled-50.png" style="widht:20px; height:20px;"></td><td><input type="checkbox" id="chceckboxBold"></input></td>
+    <td><!--Bold: --><img src="img/icons8-bold-filled-50.png" title="Pogróbienie | Bold" class="UIIcon"></td><td><input type="checkbox" id="chceckboxBold"></input></td>
   </tr>
   <tr>
-    <td>Kolor: <img src="img/icons8-text-color-filled-50.png" style="widht:20px; height:20px;"></td><td><input type='text' class="inputSpectrumPicker" id="inputFontColor" value="#FFFFFF"></input></td>
+    <td><!--Kolor:--> <img src="img/icons8-text-color-filled-50.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" id="inputFontColor" value="#FFFFFF"></input></td>
   </tr>
   <tr>
     <td colspan="2" style="text-align:left;"><input type="checkbox" checked="true" id="przypisChceckbox"></input><h3>Przypis</h3></td>
