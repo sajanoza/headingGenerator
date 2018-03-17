@@ -180,14 +180,7 @@ var t =$('.inputSpectrumPicker').spectrum({
   showAlpha: true,
   allowAlpha: true,
   change: function() {
-    var g = t.spectrum('get');
-    var kolorek =g.toRgbString();
-    //alert('kolorek'+kolorek);
-    //var c = t.spectrum("set", kolorek);
-    console.log(kolorek);
-
     wygenerujFunct();
-
   }
 } );
 t.show();

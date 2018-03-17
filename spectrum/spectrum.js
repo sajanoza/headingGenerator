@@ -861,7 +861,11 @@
                 hasChanged = !tinycolor.equals(color, colorOnShow);
 
             if (color) {
-                displayColor = color.toString(currentPreferredFormat);
+              //sajan
+                //displayColor = color.toString(currentPreferredFormat);
+                displayColor = color.toString();
+                //displayColor = color.toHex8String();
+
                 // Update the selection palette with the current color
                 addColorToSelectionPalette(color);
             }
