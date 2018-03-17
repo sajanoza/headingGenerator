@@ -83,8 +83,15 @@ inportFont.setAttribute('href',gFontsURLsArr[selectFontFamily.value]);
 styleNaglowkaArr['font-family']=selectFontFamily.value+", sans-serif";
 stylePrzypisuArr['font-family']=selectFontFamily.value+", sans-serif";
 }
-
-
+//na sktuty zwraca true jesli chceckbox o podanym id jest odchaczony
+function checkedBox(id){
+  var returnVal = false;
+   var checkbox = document.getElementById(id);
+   if (checkbox.checked){
+     returnVal = true;
+   }
+   return returnVal;
+}
 
 
 // aktualizuje tablice ze stylami na podstawie wartości pól input
@@ -97,19 +104,63 @@ function aktualizujStyle(){
   styleNaglowkaArr['color']=document.getElementById("inputFontColor").value;
   styleNaglowkaArr['text-shadow']='-1px 1px 16px #000000';
   styleNaglowkaArr['line-height']=document.getElementById("inputLineHeight").value+'em';
-  if (document.getElementById('chceckboxBold').checked){
+
+  if (checkedBox('chceckboxBold')){
     styleNaglowkaArr['font-weight']='bold';
   }else{
     styleNaglowkaArr['font-weight']='normal';
   }
+
+  if (checkedBox('chceckboxUnderline')){
+    styleNaglowkaArr['text-decoration']='underline';
+  }else{
+    styleNaglowkaArr['text-decoration']='none';
+  }
+
+  if (checkedBox('chceckboxItalic')){
+    styleNaglowkaArr['font-style']='italic';
+  }else{
+    styleNaglowkaArr['font-style']='normal';
+  }
+
+  if (checkedBox('chceckboxUppercase')){
+    styleNaglowkaArr['text-transform']='uppercase';
+  }else{
+    styleNaglowkaArr['text-transform']='none';
+  }
+
   //przypisu
   stylePrzypisuArr['font-size']=document.getElementById('inputPrzypisFontSize').value+'em';
   stylePrzypisuArr['color']=document.getElementById('inputPzypisFontColor').value;
 
+  if (checkedBox('przypisChceckboxBold')){
+    stylePrzypisuArr['font-weight']='bold';
+  }else{
+    stylePrzypisuArr['font-weight']='normal';
+  }
+
+  if (checkedBox('przypisChceckboxUnderline')){
+    stylePrzypisuArr['text-decoration']='underline';
+  }else{
+    stylePrzypisuArr['text-decoration']='none';
+  }
+
+  if (checkedBox('przypisChceckboxItalic')){
+    stylePrzypisuArr['font-style']='italic';
+  }else{
+    stylePrzypisuArr['font-style']='normal';
+  }
+
+  if (checkedBox('przypisChceckboxUppercase')){
+    stylePrzypisuArr['text-transform']='uppercase';
+  }else{
+    stylePrzypisuArr['text-transform']='none';
+  }
 
 
 
-  if (document.getElementById('przypisChceckbox').checked){
+
+  if (checkedBox('przypisChceckbox')){
     stylePrzypisuArr['display']='inline';
   }else{
     stylePrzypisuArr['display']='none';
@@ -126,12 +177,20 @@ function aktualizujStyle(){
 
 
 
-  var ramkaChceckbox = document.getElementById("ramkaChceckbox");
-  var tloChceckbox = document.getElementById('tloChceckbox');
 
-  if (tloChceckbox.checked){
+  if (checkedBox('tloChceckbox')){
     styleRamkiArr['background']=document.getElementById("inputBorderBackground").value;
+  }else{
+    styleRamkiArr['background']='none';
   }
+
+  if (checkedBox('ramkaChceckbox')){
+    styleRamkiArr['border-style']='solid';
+  }else{
+    styleRamkiArr['border-style']='none';
+  }
+
+
 }
 
 

@@ -26,6 +26,13 @@ h1, h2, h3, h4, h5, h6{
   padding:0px;
   color:#f8ff96;
 }
+tr td h3{
+  margin-top:20px;
+  font-size: 17px;
+}
+tr:first-child td h3{
+  margin-top:0px;
+}
 #settingsPanel{
   max-width:500px;
 }
@@ -90,6 +97,12 @@ select option{
 .UIIcon{
   width: 25px;
   height: 25px;
+}
+.UIMinIcon{
+  width: 18px;
+  height: 18px;
+  margin-right:3px;
+  margin-left:-2px;
 }
 
 #Lobster{font-family: 'Lobster', sans-serif;}

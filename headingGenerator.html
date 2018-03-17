@@ -44,10 +44,10 @@
   <tr><td colspan="2" style="text-align:left;"><h2>Ustawienia</h2></td></tr>
   <tr><td colspan="2" style="text-align:left;"><h3>Generalne</h3></td></tr>
   <tr>
-    <td>        1em =          </td><td>       <input type="number" id="inputGlobalFontSize" value="70"></input>px          </td>
+    <td><img src="img/1em.png" title="1 em =" class="UIIcon"></td><td><input type="number" id="inputGlobalFontSize" value="70"></input>px          </td>
   </tr>
   <tr>
-    <td><!--Font:--><img src="img/icons8-choose-font-50.png" title="Czcionka | Font" class="UIIcon"></td>
+    <td><img src="img/font.png" title="Czcionka | Font" class="UIIcon"></td>
     <td><select id='selectFontFamily'>
       <option id="Oswald" value="Oswald">Oswald</option>
       <option id="OpenSans" value="Open Sans">Open Sans</option>
@@ -61,56 +61,71 @@
     </select></td>
   </tr>
   <tr>
-    <td>Margines:</td>
-    <td><input type="text" id="inputBorderPadding" value="0.5"></input>em</td>
+    <td><img src="img/margin.png" title="Margines wewnętrzny | Padding" class="UIIcon"></td>
+    <td><input type="number" id="inputBorderPadding" value="0.5"></input>em</td>
   </tr>
+  <!-- ###############################    NAGŁÓWEK     ######################################### -->
   <tr>
     <td colspan="2" style="text-align:left;"><input type="checkbox" checked="true" id="naglowekChceckbox"></input><h3>Nagłówek</h3></td>
   </tr>
   <tr>
-    <td><h4><!--Treść:--><img src="img/icons8-align-left-32.png" title="Treść | Content" class="UIIcon"></h4></td><td><input type="text" id="inputH1Content" value="ZAŻÓŁĆ GĘŚLĄ JAŹŃ!"></input></td>
+    <td><h4><img src="img/content.png" title="Treść | Content" class="UIIcon"></h4></td><td><input type="text" id="inputH1Content" value="Zażółć gęślą jaźń!"></input></td>
   </tr>
   <tr>
-    <td><!--Wielkość:--> <img src="img/icons8-font-size-filled-50.png" title="Wielkość czcionki | Font size" class="UIIcon"></td><td><input type="number" id="inputFontSize" value="1"></input>em</td>
+    <td><img src="img/font-size.png" title="Wielkość czcionki | Font size" class="UIIcon"></td><td><input type="number" id="inputFontSize" value="1"></input>em</td>
   </tr>
   <tr>
-    <td><!--Interlinia: --><img src="img/icons8-height-24.png" title="Interlinia | Line height" class="UIIcon"></td><td><input type="number" id="inputLineHeight" value="1.2"></input>em</td>
+    <td><img src="img/line-height.png" title="Interlinia | Line height" class="UIIcon"></td><td><input type="number" id="inputLineHeight" value="1.2"></input>em</td>
   </tr>
   <tr>
-    <td><!--Bold: --><img src="img/icons8-bold-filled-50.png" title="Pogróbienie | Bold" class="UIIcon"></td><td><input type="checkbox" id="chceckboxBold"></input></td>
+    <td colspan="2">
+      <input type="checkbox" id="chceckboxBold"></input><img src="img/bold.png" title="Pogróbienie | Bold" class="UIMinIcon">
+      <input type="checkbox" id="chceckboxUnderline"></input><img src="img/underline.png" title="Podkreślenie | Underline" class="UIMinIcon">
+      <input type="checkbox" id="chceckboxItalic"></input><img src="img/italic.png" title="Kursywa | Italic" class="UIMinIcon">
+      <input type="checkbox" id="chceckboxUppercase"></input><img src="img/upper-case.png" title="Majuskuły | Upper case" class="UIMinIcon">
+    </td>
   </tr>
   <tr>
-    <td><!--Kolor:--> <img src="img/icons8-text-color-filled-50.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" id="inputFontColor" value="#FFFFFF"></input></td>
+    <td><img src="img/color.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" id="inputFontColor" value="#FFFFFF"></input></td>
   </tr>
+  <!-- ###############################    PRZYPIS     ######################################### -->
   <tr>
     <td colspan="2" style="text-align:left;"><input type="checkbox" checked="true" id="przypisChceckbox"></input><h3>Przypis</h3></td>
   </tr>
   <tr>
-    <td><h4><!--Treść:--></h4><img src="img/icons8-align-left-32.png" title="Treść | Content" class="UIIcon"></td><td><input type="text" name="inputPContent" id="inputPContent" value="Jak ja kocham składać stony na weebly!"></input></td>
+    <td><h4></h4><img src="img/content.png" title="Treść | Content" class="UIIcon"></td><td><input type="text" name="inputPContent" id="inputPContent" value="Jak ja kocham składać stony na weebly!"></input></td>
   </tr>
   <tr>
-    <td><!--Wielkość:--> <img src="img/icons8-font-size-filled-50.png" title="Wielkość czcionki | Font size" class="UIIcon"></td><td><input type="number" id="inputPrzypisFontSize" value="0.5"></input>em</td>
+    <td><img src="img/font-size.png" title="Wielkość czcionki | Font size" class="UIIcon"></td><td><input type="number" id="inputPrzypisFontSize" value="0.5"></input>em</td>
   </tr>
   <tr>
-    <td><!--Kolor:--> <img src="img/icons8-text-color-filled-50.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" id="inputPzypisFontColor" value="#FFFFFF"></input></td>
+    <td><img src="img/font-color.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" id="inputPzypisFontColor" value="#FFFFFF"></input></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <input type="checkbox" id="przypisChceckboxBold"></input><img src="img/bold.png" title="Pogróbienie | Bold" class="UIMinIcon">
+      <input type="checkbox" id="przypisChceckboxUnderline"></input><img src="img/underline.png" title="Podkreślenie | Underline" class="UIMinIcon">
+      <input type="checkbox" id="przypisChceckboxItalic"></input><img src="img/italic.png" title="Kursywa | Italic" class="UIMinIcon">
+      <input type="checkbox" id="przypisChceckboxUppercase"></input><img src="img/upper-case.png" title="Majuskuły | Upper case" class="UIMinIcon">
+    </td>
   </tr>
   <tr>
     <td colspan="2" style="text-align:left;"><input type="checkbox" checked="true" id="ramkaChceckbox"></input><h3>Ramka</h3></td>
   </tr>
   <tr>
-    <td><!--Grubość:--><img src="img/border_width.png" title="Grubość | Border width" class="UIIcon"></td><td><input type='number' name="inputBorderWidth" id="inputBorderWidth" value="0.2"></input>em</td>
+    <td><img src="img/border_width.png" title="Grubość | Border width" class="UIIcon"></td><td><input type='number' name="inputBorderWidth" id="inputBorderWidth" value="0.2"></input>em</td>
   </tr>
   <tr>
-    <td><!--Kolor:--><img src="img/icons8-fill-color-50.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" name="inputBorderColor" id="inputBorderColor" value="#FFFFFF"></input></td>
+    <td><img src="img/color.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" name="inputBorderColor" id="inputBorderColor" value="#FFFFFF"></input></td>
   </tr>
   <tr>
-    <td><!--Zaokrąglenie:--><img src="img/icons8-rounded-rectangle-stroked-50.png" title="Zaokrąglenie | Border radius" class="UIIcon"></td><td><input type="number" name="inputBorderRadius" id="inputBorderRadius" value="0.1"></input>em</td>
+    <td><img src="img/border-radius.png" title="Zaokrąglenie | Border radius" class="UIIcon"></td><td><input type="number" name="inputBorderRadius" id="inputBorderRadius" value="0.1"></input>em</td>
   </tr>
   <tr>
     <td colspan="2" style="text-align:left;"><input type="checkbox" checked="true" id="tloChceckbox"></input><h3>Tlo</h3></td>
   </tr>
   <tr>
-    <td><!--Kolor:--><img src="img/icons8-fill-color-50.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" id="inputBorderBackground" value="#000000b5"></input></td>
+    <td><img src="img/color.png" title="Kolor | Color" class="UIIcon"></td><td><input type='text' class="inputSpectrumPicker" id="inputBorderBackground" value="#000000b5"></input></td>
   </tr>
   <tr>
     <td>-----</td><td>-----</td>
